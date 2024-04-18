@@ -1,4 +1,4 @@
-%brick = ConnectBrick('GRANNYVANNY');
+%brick = ConnectBrick('GRANNYVANNY');w
 %DisconnectBrick(brick);
 %brick.drawTest();
 %brick.GetBattLevel;
@@ -15,31 +15,25 @@ while 1
     switch key
         case 'w'
             disp('Up Pressed!');
-            brick.MoveMotorAngleRel('BC', 50, 180);
-
+            brick.MoveMotor('BC', 50);
         case 's'
             disp('Down Pressed!');
-            brick.MoveMotorAngleRel('BC', -50, 180);
-
+            brick.MoveMotor('BC', -50);
         case 'a'
             disp('Left Pressed!');
-            brick.MoveMotorAngleRel('C', 25, 180);
-
+            brick.MoveMotor('C', 20);
         case 'd'
             disp('Right Pressed!');
-            brick.MoveMotorAngleRel('B', 25, 180);
-
+            brick.MoveMotor('B', 20);
         case 'r'
             disp('Go Up');
-            brick.MoveMotorAngleRel('D', 30, 5);
-
+            brick.MoveMotor('D', -20);
         case 'f'
             disp('Go Down');
-            brick.MoveMotorAngleRel('D', -30, 5);
-
+            brick.MoveMotor('D', 10);
         case '0'
             disp('No Key Pressed!');
-            
+            brick.StopAllMotors();
         case 'q'
             break;
     end
